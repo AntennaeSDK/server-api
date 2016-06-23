@@ -8,6 +8,8 @@ import com.google.gson.Gson;
 public class ServerTrackedMessage {
 
     private ServerMessage serverMessage;
+    private ClientMessage clientMessage;
+
     private String sessionId;
     private String ipAddress;
 
@@ -16,6 +18,12 @@ public class ServerTrackedMessage {
     }
     public void setServerMessage(ServerMessage serverMessage) {
         this.serverMessage = serverMessage;
+    }
+    public ClientMessage getClientMessage() {
+        return clientMessage;
+    }
+    public void setClientMessage(ClientMessage clientMessage) {
+        this.clientMessage = clientMessage;
     }
     public String getSessionId() {
         return sessionId;

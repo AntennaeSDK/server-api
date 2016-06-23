@@ -5,7 +5,7 @@
 
 	<groupId>org.antennae.common</groupId>
 	<artifactId>server-api</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.2</version>
 	<packaging>jar</packaging>
 
 	<name>server-api</name>
@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>org.antennae.common</groupId>
 			<artifactId>client-api</artifactId>
-			<version>0.1.6</version>
+			<version>0.1.7</version>
 		</dependency>
 
 		<!-- Third party Dependencies -->
