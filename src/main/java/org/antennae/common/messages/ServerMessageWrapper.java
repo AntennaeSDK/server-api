@@ -5,13 +5,12 @@ import com.google.gson.Gson;
 /**
  * Created by snambi on 6/22/16.
  */
-public class ServerTrackedMessage {
+public class ServerMessageWrapper {
 
     private ServerMessage serverMessage;
-    private ClientMessage clientMessage;
 
     private String sessionId;
-    private String ipAddress;
+    private String nodeId;
 
     public ServerMessage getServerMessage() {
         return serverMessage;
@@ -19,23 +18,17 @@ public class ServerTrackedMessage {
     public void setServerMessage(ServerMessage serverMessage) {
         this.serverMessage = serverMessage;
     }
-    public ClientMessage getClientMessage() {
-        return clientMessage;
-    }
-    public void setClientMessage(ClientMessage clientMessage) {
-        this.clientMessage = clientMessage;
-    }
     public String getSessionId() {
         return sessionId;
     }
     public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
     }
-    public String getIpAddress() {
-        return ipAddress;
+    public String getNodeId() {
+        return nodeId;
     }
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+    public void setNodeId(String nodeId) {
+        this.nodeId = nodeId;
     }
 
 
@@ -45,9 +38,9 @@ public class ServerTrackedMessage {
         return result;
     }
 
-    public static ServerTrackedMessage fromJson( String value ){
+    public static ServerMessageWrapper fromJson(String value ){
         Gson gson = new Gson();
-        ServerTrackedMessage message = gson.fromJson( value, ServerTrackedMessage.class);
+        ServerMessageWrapper message = gson.fromJson( value, ServerMessageWrapper.class);
         return message;
     }
 }
